@@ -2,8 +2,8 @@ import React, { Component, PureComponent, Fragment, memo } from 'react';
 import { connect } from 'dva';
 import { Row, Col, Input, Button, Switch } from 'antd';
 import { areEqual, FixedSizeList } from 'react-window';
-import AutoSizer from 'react-virtualized-auto-sizer';
-import memoize from 'memoize-one';
+import AutoSizer from 'react-virtualized-auto-sizer'; //列表自适应
+import memoize from 'memoize-one'; //记忆，防止重复渲染
 import styles from './index.less';
 
 class ItemRender extends PureComponent {
@@ -97,6 +97,7 @@ class ReactWindow extends Component {
     alert(3);
   };
 
+  //滚动加载
   onScroll = ({ scrollDirection, scrollOffset, scrollUpdateWasRequested }) => {
     if (
       this.props.page < 5 &&
@@ -118,6 +119,7 @@ class ReactWindow extends Component {
     });
   };
 
+  //滚动到对应行
   scrollToItem = () => {
     const index = this.getIndex();
     this.listRef.scrollToItem(index);
@@ -131,6 +133,7 @@ class ReactWindow extends Component {
     return index;
   };
 
+  //测试打开详情对列表页影响
   open = (id) => {
     console.log(id);
     this.setState({

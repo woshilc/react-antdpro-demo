@@ -51,4 +51,5 @@ export default {
   'menu.editor.koni': '拓扑编辑器',
   'menu.ReactWindow': 'ReactWindow',
   'menu.JiShiQi': '计时器',
+  'menu.ClassNames&Media': 'ClassNames&Media',
 };

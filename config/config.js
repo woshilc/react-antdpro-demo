@@ -89,6 +89,12 @@ export default defineConfig({
               component: './JiShiQi',
             },
             {
+              name: 'ClassNames&Media',
+              icon: 'smile',
+              path: '/classnames',
+              component: './ClassNames',
+            },
+            {
               component: './404',
             },
           ],
