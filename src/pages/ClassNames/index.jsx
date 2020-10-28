@@ -9,6 +9,7 @@ export default class ClassNames extends Component {
     this.state = {
       inlineThrough: true,
       underline: true,
+      adsVisible: true,
     };
   }
 
@@ -17,6 +18,13 @@ export default class ClassNames extends Component {
     this.setState({
       inlineThrough: !inlineThrough,
       underline: !underline,
+    });
+  };
+
+  adsVisibleChange = () => {
+    const { adsVisible } = this.state;
+    this.setState({
+      adsVisible: !adsVisible,
     });
   };
 
@@ -49,7 +57,12 @@ export default class ClassNames extends Component {
         </div>
 
         <div
-          style={{ width: '100%', marginTop: '24px', border: '3px solid #ccc', overflow: 'hidden' }}
+          style={{
+            width: '100%',
+            marginTop: '24px',
+            border: '3px solid black',
+            overflow: 'hidden',
+          }}
           className={styles['font-size']}
         >
           <div className={styles['header']}>
@@ -64,7 +77,7 @@ export default class ClassNames extends Component {
           <div className={classnames(styles['footer'], styles['box'])}>12345</div>
         </div>
 
-        <div style={{ width: '100%', marginTop: '24px', border: '3px solid #ccc' }}>
+        <div style={{ width: '100%', marginTop: '24px', border: '3px solid black' }}>
           <div className={classnames(styles['box'], styles['left'])}></div>
           <div className={classnames(styles['box'], styles['content-main'])}></div>
           <div className={classnames(styles['box'], styles['right'])}></div>
@@ -93,14 +106,37 @@ export default class ClassNames extends Component {
           </div>
         </div>
 
-        <div>
-          <div></div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div className={styles['flex-wrap']}>
+          <div className={styles['flex-header']}>header</div>
+          <div className={styles['flex-body']}>
+            <div className={styles['flex-nav']}>nav</div>
+            <div className={styles['flex-content']}>
+              content
+              <Button type="primary" onClick={this.adsVisibleChange}>
+                click
+              </Button>
+              <p>
+                <a
+                  href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Flex 布局教程：实例篇
+                </a>
+              </p>
+              <p>
+                <a
+                  href="https://www.cnblogs.com/LangZ-/p/12703858.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  flex属性-flex:1到底是什么
+                </a>
+              </p>
+            </div>
+            {this.state.adsVisible && <div className={styles['flex-ads']}>ads</div>}
           </div>
-          <div></div>
+          <div className={styles['flex-footer']}>footer</div>
         </div>
       </Fragment>
     );
