@@ -52,4 +52,5 @@ export default {
   'menu.ReactWindow': 'ReactWindow',
   'menu.JiShiQi': '计时器',
   'menu.ClassNames&Media': 'ClassNames&Media',
+  'menu.ReactQuill': 'ReactQuill',
 };

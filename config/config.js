@@ -95,6 +95,12 @@ export default defineConfig({
               component: './ClassNames',
             },
             {
+              name: 'ReactQuill',
+              icon: 'smile',
+              path: '/react-quill',
+              component: './ReactQuill',
+            },
+            {
               component: './404',
             },
           ],
