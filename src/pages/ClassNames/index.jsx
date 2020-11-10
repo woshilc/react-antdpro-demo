@@ -138,6 +138,18 @@ export default class ClassNames extends Component {
           </div>
           <div className={styles['flex-footer']}>footer</div>
         </div>
+
+        <div className={styles.grid001}>
+          <div className={styles.header001}>header</div>
+          <div className={styles.body001}>
+            <div className={styles.nav001}>nav</div>
+            <div className={styles.content001}>
+              <div className={styles.contentcontent001}>
+                <div className={styles.contentcontentcontent001}></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </Fragment>
     );
   }
