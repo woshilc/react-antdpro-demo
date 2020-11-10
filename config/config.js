@@ -101,6 +101,12 @@ export default defineConfig({
               component: './ReactQuill',
             },
             {
+              name: 'Transition',
+              icon: 'smile',
+              path: '/transition',
+              component: './Transition',
+            },
+            {
               component: './404',
             },
           ],

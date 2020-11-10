@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { PageContainer } from '@ant-design/pro-layout';
 import { Button } from 'antd';
 import classnames from 'classnames';
 import styles from './index.less';

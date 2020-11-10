@@ -53,4 +53,5 @@ export default {
   'menu.JiShiQi': '计时器',
   'menu.ClassNames&Media': 'ClassNames&Media',
   'menu.ReactQuill': 'ReactQuill',
+  'menu.Transition': 'Transition',
 };
