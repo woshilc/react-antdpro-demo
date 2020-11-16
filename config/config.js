@@ -107,6 +107,18 @@ export default defineConfig({
               component: './Transition',
             },
             {
+              name: 'Scroller',
+              icon: 'smile',
+              path: '/scroller',
+              component: './Scroller',
+            },
+            {
+              name: 'Router',
+              icon: 'smile',
+              path: '/router/:id?',
+              component: './Router/[id$]/index',
+            },
+            {
               component: './404',
             },
           ],

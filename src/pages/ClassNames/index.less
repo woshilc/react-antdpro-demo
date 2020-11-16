@@ -155,18 +155,26 @@
   flex: auto;
   background: #d0d0d0;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.contentcontent001 {
-  height: 45vh;
-  width: 100%;
-  background: yellowgreen;
+.contenttop {
+  flex: 0 1 5vh;
+  background-color: blue;
 }
 
-.contentcontentcontent001 {
-  height: 400px;
-  width: 800px;
-  border: 1px solid red;
+.contentbottom {
+  flex: auto;
+  background-color: yellowgreen;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.contentcontent {
+  flex: 1 1 100%;
+  overflow: auto;
 }
 
 @media only screen and (max-width: 1440px) {

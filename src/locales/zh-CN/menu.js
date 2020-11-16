@@ -54,4 +54,6 @@ export default {
   'menu.ClassNames&Media': 'ClassNames&Media',
   'menu.ReactQuill': 'ReactQuill',
   'menu.Transition': 'Transition',
+  'menu.Scroller': 'Scroller',
+  'menu.Router': 'Router',
 };

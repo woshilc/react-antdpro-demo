@@ -143,8 +143,11 @@ export default class ClassNames extends Component {
           <div className={styles.body001}>
             <div className={styles.nav001}>nav</div>
             <div className={styles.content001}>
-              <div className={styles.contentcontent001}>
-                <div className={styles.contentcontentcontent001}></div>
+              <div className={styles.contenttop}></div>
+              <div className={styles.contentbottom}>
+                <div className={styles.contentcontent}>
+                  <div style={{ height: '800px', width: '800px' }}></div>
+                </div>
               </div>
             </div>
           </div>
