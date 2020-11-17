@@ -53,7 +53,8 @@ export default {
   'menu.JiShiQi': '计时器',
   'menu.ClassNames&Media': 'ClassNames&Media',
   'menu.ReactQuill': 'ReactQuill',
-  'menu.Transition': 'Transition',
-  'menu.Scroller': 'Scroller',
-  'menu.Router': 'Router',
+  'menu.Transition': '过渡',
+  'menu.Scroller': '滚动条',
+  'menu.Router': '路由配置',
+  'menu.Event': '事件，div显隐',
 };

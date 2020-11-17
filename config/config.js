@@ -119,6 +119,12 @@ export default defineConfig({
               component: './Router/[id$]/index',
             },
             {
+              name: 'Event',
+              icon: 'smile',
+              path: '/event',
+              component: './Event',
+            },
+            {
               component: './404',
             },
           ],
