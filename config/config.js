@@ -71,6 +71,12 @@ export default defineConfig({
               ],
             },
             {
+              name: 'Note',
+              icon: 'BookOutlined',
+              path: '/note',
+              component: './Note',
+            },
+            {
               name: 'list.table-list',
               icon: 'table',
               path: '/list',

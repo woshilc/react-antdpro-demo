@@ -57,4 +57,5 @@ export default {
   'menu.Scroller': '滚动条',
   'menu.Router': '路由配置',
   'menu.Event': '事件，div显隐',
+  'menu.Note': '笔记',
 };
