@@ -1,0 +1,145 @@
+.editor-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  :global {
+    .ql-picker-options {
+      position: absolute;
+      bottom: 30px;
+      top: auto !important;
+    }
+  }
+}
+
+// .quill >div{
+//         border: 0px!important;
+//         min-height: 75px;
+//         max-height: 150px;
+//         overflow-y: auto;
+//         position: static;
+// }
+
+.quill {
+  :global {
+    .mention {
+      background-color: white;
+      color: #7194c6;
+      font-weight: 500;
+    }
+
+    a {
+      color: #7194c6;
+    }
+
+    .ql-container {
+      border: 0px;
+      position: static;
+    }
+
+    .ql-editor {
+      min-height: 15vh;
+      max-height: 35vh;
+      overflow-y: auto;
+    }
+  }
+}
+
+.mention-list-container {
+  max-height: 200px;
+  overflow-y: auto;
+  width: 180px;
+  background-color: white;
+}
+
+.ql-mention-list-container {
+  width: 180px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px 0 rgba(30, 30, 30, 0.08);
+  z-index: 9001;
+}
+
+.ql-mention-list-item {
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0 20px;
+  vertical-align: middle;
+  .selected {
+    background-color: #d3e1eb;
+    text-decoration: none;
+  }
+}
+
+.toolbar-wrapper {
+  border: 0px !important;
+  .ql-submit {
+    border: 1px solid #ccc !important;
+  }
+}
+
+.file-list {
+  padding: 10px 0px 0px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.file-item {
+  position: relative;
+  margin: 0px 10px 10px 0px;
+  max-width: 150px;
+  height: 64px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.file-item-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 10px 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  //opacity: 0.3;半透明，但是会导致div内中的其他内容半透明化，且存在兼容问题
+  display: none;
+}
+
+.file-item:hover {
+  .file-item-mask {
+    display: block;
+  }
+  .file-item-option {
+    display: block;
+  }
+}
+
+.file-item-option {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    color: #1890ff;
+  }
+}
+
+.file-item-option-show {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    color: #1890ff;
+  }
+}
