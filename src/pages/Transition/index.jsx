@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Component } from 'react';
+import { Avatar } from 'antd';
 import classnames from 'classnames';
 import styles from './index.less';
 
@@ -25,6 +26,14 @@ export default class Transition extends Component {
     return (
       <div>
         <Transition1 />
+        <img
+          src="https://www.baidu.com/img/PCdong_eab05f3d3a8e54ca5a0817f09b39d463.gif"
+          width="400"
+        />
+        <Avatar
+          src="https://www.baidu.com/img/PCdong_eab05f3d3a8e54ca5a0817f09b39d463.gif"
+          size={128}
+        />
       </div>
     );
   }
