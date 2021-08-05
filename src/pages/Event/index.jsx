@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Button } from 'antd';
 import styles from './index.less';
 
 class Event1 extends PureComponent {
@@ -132,6 +133,47 @@ export default class Event extends PureComponent {
     this.state = {};
   }
 
+  handlePaste = () => {
+    // let pasteArea = document.createElement('textarea');
+    // document.body.appendChild(pasteArea);
+    // pasteArea.focus();
+    // // document.execCommand('paste',null,null);
+    // var pasteText = document.querySelector("#output");
+    // pasteText.focus();
+    // document.execCommand("paste");
+    // console.log(pasteText.textContent);
+
+    // navigator.clipboard.readText().then(clipText =>{
+    //   console.log(clipText);
+    //   // document.getElementById("output").value = clipText
+    // });
+
+    navigator.permissions.query({ name: 'clipboard-read' }).then((result) => {
+      if (result.state == 'granted' || result.state == 'prompt') {
+        navigator.clipboard.read().then((data) => {
+          console.log(data);
+          let png = data[0].getType['text/plain'];
+          console.log(png);
+          // for (let i=0; i<data.length; i++) {
+          //   console.log(data[i]);
+          //   for(let type of data[i].types){
+          //     console.log(data[i].getType[type]);
+          //   }
+
+          // console.log(data[i].getAs("text/plain"));
+          // console.log(data[i].getAs("text/html"));
+          // console.log(data[i].getAs("text/rtf"));
+          // console.log(data[i].getAs("text/png"));
+          // if (data.items[i].type != "text/plain") {
+          //   alert("Clipboard contains non-text data. Unable to access it.");
+          // } else {
+          //   textElem.innerText = data.items[i].getAs("text/plain");
+          // }
+        });
+      }
+    });
+  };
+
   render() {
     return (
       <div>
@@ -148,6 +190,8 @@ export default class Event extends PureComponent {
         <Wrapper>
           <Event2 />
         </Wrapper>
+        <Button onClick={this.handlePaste}>paste</Button>
+        <textarea id="output" />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { PureComponent, Fragment } from 'react';
-import { Tabs, Typography } from 'antd';
+import { Tabs, Typography, Input, Button } from 'antd';
+import Big from 'big.js';
 import { Scrollbars } from 'react-custom-scrollbars';
 import styles from './index.less';
 
@@ -20,14 +21,41 @@ function Note1_1(props) {
   );
 }
 
+class Note1_2 extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  calculate = () => {
+    const a = 0.1 + 0.2;
+    const b = Big(0.1).plus(0.2).toString();
+    console.log(a, b);
+    const c = Big(b).plus(1).toString();
+    console.log(c);
+    let d = Big(1.23455778);
+    console.log(d.toFixed(3));
+    let e = 1.23455778;
+    console.log(e.toFixed(3));
+  };
+
+  render() {
+    return (
+      <Fragment>
+        <Button onClick={this.calculate}>calculate</Button>
+      </Fragment>
+    );
+  }
+}
+
 function Note1(props) {
   return (
     <Tabs defaultActiveKey="1" tabPosition="left">
       <TabPane tab="sequelize" key="1">
         <Note1_1 />
       </TabPane>
-      <TabPane tab="Tab 2" key="2">
-        Content of Tab Pane 2
+      <TabPane tab="big.js" key="2">
+        <Note1_2 />
       </TabPane>
       <TabPane tab="Tab 3" key="3">
         Content of Tab Pane 3

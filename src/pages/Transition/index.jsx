@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Component } from 'react';
-import { Avatar, Select } from 'antd';
+import { Avatar, Select, Input } from 'antd';
 import classnames from 'classnames';
 import styles from './index.less';
 
@@ -14,6 +14,40 @@ const Transition1 = (props) => {
         onClick={() => setShow(!show)}
       ></div>
       <div className={classnames(styles.test, { [styles.test2]: show })}></div>
+    </div>
+  );
+};
+
+const Transition2 = (props) => {
+  const [text, setText] = useState('123');
+
+  funTransitionHeight = (element, time) => {
+    if (typeof window.getComputedStyle == 'undefined') {
+      console.log('failed');
+      return;
+    }
+    console.log(window.getComputedStyle);
+
+    let height = window.getComputedStyle(element).height;
+    element.style.transition = 'none';
+    element.style.height = 'auto';
+
+    let targetHeight = window.getComputedStyle(element).height;
+    element.style.height = height;
+    element.offsetWidth = element.offsetWidth;
+    if (time) element.style.transition = 'height ' + time + 'ms';
+    element.style.height = targetHeight;
+  };
+
+  return (
+    <div>
+      <Input
+        value={text}
+        onChange={(e) => {
+          console.log(e.target.value);
+          setText(e.target.value);
+        }}
+      />
     </div>
   );
 };
@@ -56,6 +90,7 @@ export default class Transition extends Component {
           </Option>
           <Option value="Yiminghe">yiminghe</Option>
         </Select>
+        <Transition2 />
       </div>
     );
   }

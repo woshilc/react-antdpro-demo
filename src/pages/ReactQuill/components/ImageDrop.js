@@ -35,6 +35,8 @@ export class ImageDrop {
 
   handlePaste(evt) {
     evt.preventDefault();
+    console.log(evt);
+    console.log(evt.clipboardData.getData('Text'));
     if (evt.clipboardData && evt.clipboardData.items && evt.clipboardData.items.length) {
       this.readFiles(evt.clipboardData.items, (file) => {
         this.options.uploadImage(file);
