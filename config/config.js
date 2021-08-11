@@ -131,6 +131,18 @@ export default defineConfig({
               component: './Event',
             },
             {
+              name: 'Grid',
+              icon: 'smile',
+              path: '/grid',
+              component: './Grid',
+            },
+            {
+              name: 'AnimTrans',
+              icon: 'smile',
+              path: '/animtrans',
+              component: './AnimTrans',
+            },
+            {
               component: './404',
             },
           ],

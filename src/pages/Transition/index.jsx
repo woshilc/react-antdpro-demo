@@ -21,7 +21,7 @@ const Transition1 = (props) => {
 const Transition2 = (props) => {
   const [text, setText] = useState('123');
 
-  funTransitionHeight = (element, time) => {
+  const funTransitionHeight = (element, time) => {
     if (typeof window.getComputedStyle == 'undefined') {
       console.log('failed');
       return;
